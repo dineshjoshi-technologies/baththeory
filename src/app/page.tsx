@@ -338,9 +338,9 @@ export default function Home() {
                 </p>
                 <p>
                   Our grandmothers knew the power of turmeric for glowing skin,
-                  sandalwood for cooling the body, and rose for softening. We've
+                  sandalwood for cooling the body, and rose for softening. We&apos;ve
                   taken these time-tested ingredients and crafted them into
-                  beautiful, gentle soaps for today's lifestyle.
+                  beautiful, gentle soaps for today&apos;s lifestyle.
                 </p>
                 <p>
                   Every bar is handcrafted in small batches using natural

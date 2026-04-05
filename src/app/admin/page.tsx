@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { initialInventory, InventoryItem } from "@/data/inventory";
 
 const STORAGE_KEY = "bath-theory-inventory";
@@ -67,12 +68,12 @@ export default function AdminDashboard() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             <h1 className="font-serif text-2xl font-bold text-gray-900">Bath Theory Admin</h1>
-            <a
+            <Link
               href="/"
               className="text-sm text-primary hover:underline"
             >
               ← Back to Website
-            </a>
+            </Link>
           </div>
         </div>
       </header>
