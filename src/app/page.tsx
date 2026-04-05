@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { products } from "@/data/products";
 
 const WHATSAPP_NUMBER = "919999999999";
@@ -175,30 +176,14 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-accent to-secondary flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 mx-auto rounded-full bg-primary/20 flex items-center justify-center mb-6">
-                    <svg
-                      className="w-16 h-16 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                      />
-                    </svg>
-                  </div>
-                  <p className="font-serif text-xl text-primary-dark">
-                    5 Signature Bars
-                  </p>
-                  <p className="text-foreground/60 mt-2">
-                    Starting at ₹249
-                  </p>
-                </div>
+              <div className="aspect-square rounded-2xl overflow-hidden">
+                <Image
+                  src="/products/hero.jpg"
+                  alt="Bath Theory - Handcrafted Bath Rituals"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -227,24 +212,13 @@ export default function Home() {
                 key={product.id}
                 className="group bg-background rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="aspect-square bg-gradient-to-br from-accent to-secondary flex items-center justify-center relative">
-                  <div className="text-center p-6">
-                    <div className="w-20 h-20 mx-auto rounded-full bg-primary/20 flex items-center justify-center">
-                      <svg
-                        className="w-10 h-10 text-primary"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                        />
-                      </svg>
-                    </div>
-                  </div>
+                <div className="aspect-square relative overflow-hidden">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                   <button
                     onClick={() => setSelectedProduct(product.id)}
                     className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100"
@@ -291,20 +265,13 @@ export default function Home() {
                   key={product.id}
                   className="flex bg-background rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <div className="w-24 h-24 rounded-lg bg-gradient-to-br from-accent to-secondary flex items-center justify-center flex-shrink-0">
-                    <svg
-                      className="w-10 h-10 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                      />
-                    </svg>
+                  <div className="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 relative">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <div className="ml-5 flex-1">
                     <h3 className="font-serif text-lg font-semibold text-foreground">
@@ -338,27 +305,13 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-accent to-secondary flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto rounded-full bg-primary/20 flex items-center justify-center mb-4">
-                    <svg
-                      className="w-12 h-12 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                      />
-                    </svg>
-                  </div>
-                  <p className="font-serif text-lg text-primary-dark">
-                    Crafted with Love
-                  </p>
-                </div>
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
+                <Image
+                  src="/products/lifestyle.jpg"
+                  alt="Bath Theory - Crafted with Love"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
             <div className="space-y-6">
@@ -594,25 +547,16 @@ export default function Home() {
             className="bg-background rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="aspect-square bg-gradient-to-br from-accent to-secondary rounded-t-2xl flex items-center justify-center relative">
-              <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
-                <svg
-                  className="w-12 h-12 text-primary"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                  />
-                </svg>
-              </div>
+            <div className="aspect-square relative overflow-hidden rounded-t-2xl">
+              <Image
+                src={selected.image}
+                alt={selected.name}
+                fill
+                className="object-cover"
+              />
               <button
                 onClick={() => setSelectedProduct(null)}
-                className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center hover:bg-white transition-colors"
+                className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center hover:bg-white transition-colors z-10"
               >
                 <svg
                   className="w-4 h-4"

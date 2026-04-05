@@ -1,0 +1,32 @@
+{
+  "brand": {
+    "bath-900": { "value": "#1a1a1a", "comment": "Primary text, logo" },
+    "bath-100": { "value": "#f5f0e8", "comment": "Background, light surfaces" },
+    "bath-50": { "value": "#faf8f4", "comment": "Page background" }
+  },
+  "stone": {
+    "50": { "value": "#faf9f7", "comment": "Page bg" },
+    "100": { "value": "#f0ece6", "comment": "Card bg" },
+    "200": { "value": "#e2dcd2", "comment": "Borders" },
+    "300": { "value": "#c4b9a8", "comment": "Secondary text" },
+    "400": { "value": "#9a8e7e", "comment": "Muted text" },
+    "500": { "value": "#6b5e4f", "comment": "Body text" },
+    "600": { "value": "#4a3f33", "comment": "Headings" },
+    "700": { "value": "#2d2519", "comment": "Strong text" },
+    "800": { "value": "#1e1811", "comment": "Near-black" },
+    "900": { "value": "#12100c", "comment": "Pure dark" }
+  },
+  "product": {
+    "aloe": { "value": "#7a9e7e", "comment": "Aloe Oat Comfort Bar" },
+    "milk": { "value": "#d4a574", "comment": "Milk Honey Cream Bar" },
+    "rose": { "value": "#c48b8b", "comment": "Rose Aloe Softening Bar" },
+    "haldi": { "value": "#d4a017", "comment": "Haldi Chandan Glow Bar" },
+    "sandal": { "value": "#8b6f47", "comment": "Sandalwood Aloe Ritual Bar" }
+  },
+  "semantic": {
+    "success": { "value": "#5a8a5e" },
+    "warning": { "value": "#c49a1a" },
+    "error": { "value": "#a84a4a" },
+    "info": { "value": "#6b8a9a" }
+  }
+}
