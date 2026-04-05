@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@/components/Analytics";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -12,10 +13,22 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
 });
 
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+});
+
 export const metadata: Metadata = {
   title: "Bath Theory | Ancient Indian Bathing Rituals, Modern Self-Care",
   description: "Handcrafted bath & body products inspired by the wisdom of Indian bathing rituals. Premium soaps, body butters, and self-care essentials for modern living.",
   keywords: ["handmade soaps", "Indian bathing rituals", "natural skincare", "bath products", "self-care", "ayurvedic"],
+  openGraph: {
+    title: "Bath Theory | Ancient Indian Bathing Rituals, Modern Self-Care",
+    description: "Handcrafted bath & body products inspired by the wisdom of Indian bathing rituals.",
+    type: "website",
+    locale: "en_IN",
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +41,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${playfair.variable} scroll-smooth`}
     >
-      <body className="min-h-screen antialiased">{children}</body>
+      <body className="min-h-screen antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

@@ -1,6 +1,37 @@
 @import "tailwindcss";
 
 :root {
+  /* Primary brand */
+  --color-bath-900: #1a1a1a;
+  --color-bath-100: #f5f0e8;
+  --color-bath-50: #faf8f4;
+
+  /* Stone neutral scale */
+  --color-stone-50: #faf9f7;
+  --color-stone-100: #f0ece6;
+  --color-stone-200: #e2dcd2;
+  --color-stone-300: #c4b9a8;
+  --color-stone-400: #9a8e7e;
+  --color-stone-500: #6b5e4f;
+  --color-stone-600: #4a3f33;
+  --color-stone-700: #2d2519;
+  --color-stone-800: #1e1811;
+  --color-stone-900: #12100c;
+
+  /* Product accent colors */
+  --color-aloe: #7a9e7e;
+  --color-milk: #d4a574;
+  --color-rose: #c48b8b;
+  --color-haldi: #d4a017;
+  --color-sandal: #8b6f47;
+
+  /* Semantic */
+  --color-success: #5a8a5e;
+  --color-warning: #c49a1a;
+  --color-error: #a84a4a;
+  --color-info: #6b8a9a;
+
+  /* Legacy compatibility */
   --background: #faf9f7;
   --foreground: #2c2c2c;
   --primary: #8b6f4e;
@@ -13,6 +44,37 @@
 }
 
 @theme inline {
+  /* Brand */
+  --color-bath-900: var(--color-bath-900);
+  --color-bath-100: var(--color-bath-100);
+  --color-bath-50: var(--color-bath-50);
+
+  /* Stone scale */
+  --color-stone-50: var(--color-stone-50);
+  --color-stone-100: var(--color-stone-100);
+  --color-stone-200: var(--color-stone-200);
+  --color-stone-300: var(--color-stone-300);
+  --color-stone-400: var(--color-stone-400);
+  --color-stone-500: var(--color-stone-500);
+  --color-stone-600: var(--color-stone-600);
+  --color-stone-700: var(--color-stone-700);
+  --color-stone-800: var(--color-stone-800);
+  --color-stone-900: var(--color-stone-900);
+
+  /* Product accents */
+  --color-aloe: var(--color-aloe);
+  --color-milk: var(--color-milk);
+  --color-rose: var(--color-rose);
+  --color-haldi: var(--color-haldi);
+  --color-sandal: var(--color-sandal);
+
+  /* Semantic */
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
+  --color-info: var(--color-info);
+
+  /* Legacy */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
@@ -22,8 +84,11 @@
   --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-whatsapp: var(--whatsapp);
+
+  /* Fonts */
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
+  --font-accent: var(--font-cormorant);
 }
 
 body {
